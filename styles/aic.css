@@ -51,7 +51,7 @@ body {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   /* justify-content: space-between;  */
-  padding: 4px 40px; /* reduced vertical padding to make navbar shorter */
+  padding: 4px 60px; /* reduced vertical padding to make navbar shorter */
   width: 100%; /* full-length navbar */
   max-width: none;
   margin: 0;
@@ -78,7 +78,7 @@ body {
 
 .logo-container {
   /* border: 2px solid var(--secondary);  */
-  padding: 2px 8px;
+  padding: 2px 12px;
 
   text-align: center;
   justify-self: start;
@@ -87,7 +87,7 @@ body {
 
 .logo-container img {
   height: 50px;
-  width: 130px;
+  width: 150px;
 }
 
 .logo-text {
@@ -380,7 +380,7 @@ body {
   .nav-links { display: none !important; }
   .menu-toggle { display: block; }
   .gov-logo-group { display: none; }
-  .navbar { padding: 8px 16px; grid-template-columns: auto 1fr auto; }
+  .navbar { padding: 8px 20px; grid-template-columns: auto 1fr auto; }
 }
 
 @keyframes ticker {
