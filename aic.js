@@ -542,6 +542,32 @@ const initAlertTicker = () => {
     ticker.dataset.loopInitialized = 'true';
 };
 
+//
+// 6.6 MARQUEE + ALERT HOVER CONTROL
+//
+const initHoverPauseControls = () => {
+    // Pause scrolling logo marquees on hover
+    document.querySelectorAll('.marquee-content').forEach(strip => {
+        strip.addEventListener('mouseenter', () => {
+            strip.style.animationPlayState = 'paused';
+        });
+        strip.addEventListener('mouseleave', () => {
+            strip.style.animationPlayState = 'running';
+        });
+    });
+
+    // Pause alert ticker on hover
+    const ticker = document.querySelector('.alert-ticker');
+    if (ticker) {
+        ticker.addEventListener('mouseenter', () => {
+            ticker.style.animationPlayState = 'paused';
+        });
+        ticker.addEventListener('mouseleave', () => {
+            ticker.style.animationPlayState = 'running';
+        });
+    }
+};
+
 
 // 
 // 7. MOBILE MENU (RESPONSIVE)
@@ -665,6 +691,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTestimonials();
     initNavbarScroll();
     initMobileMenu();
+    initHoverPauseControls();
 
     // Handle Window Resize for Sliders
     window.addEventListener('resize', () => {
